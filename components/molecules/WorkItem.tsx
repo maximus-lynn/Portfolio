@@ -53,10 +53,15 @@ const SubTitle = styled('h6')`
   text-align: center;
 `;
 
+const Anchor = styled('a')`
+  display: block;
+  cursor: pointer;
+`;
+
 const WorkItem = ({ item }: Props) => (
   <Article>
-    <Link href={item.url}>
-      <>
+    <Link href={`/work/${item.url}`}>
+      <Anchor>
         <Image src={item.image} alt={item.title} />
         <Header>
           <div>
@@ -73,7 +78,7 @@ const WorkItem = ({ item }: Props) => (
             <SubTitle>{item.sub_title}</SubTitle>
           </div>
         </Header>
-      </>
+      </Anchor>
     </Link>
   </Article>
 );
