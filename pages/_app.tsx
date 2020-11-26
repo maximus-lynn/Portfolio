@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 // Atoms
-import Loading from '../components/atoms/loading';
+import Loading from '../components/atoms/Loading';
 
 function App({ Component, pageProps }) {
   const [loading, setLoading] = useState<boolean>(false);

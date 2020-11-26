@@ -1,12 +1,14 @@
 import { FC, SetStateAction, Dispatch } from 'react';
 import styled from 'styled-components';
 
-interface Props {
+interface StyledProps {
   active: boolean;
+}
+interface Props extends StyledProps {
   toggleNavigation: Dispatch<SetStateAction<boolean>>;
 }
 
-const HamburgerContainer = styled('span')<Props>`
+const HamburgerContainer = styled('span')<StyledProps>`
   position: absolute;
   top: 2.5rem;
   right: 2rem;
