@@ -2,6 +2,7 @@ import { FC } from "react";
 
 // Molecules
 import Navigation from "../molecules/Navigation";
+import Footer from "../molecules/Footer";
 
 const Layout: FC = ({ children }) => (
   <>
@@ -9,6 +10,7 @@ const Layout: FC = ({ children }) => (
     <main>
       {children}
     </main>
+    <Footer />
   </>
 );
 
