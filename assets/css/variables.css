@@ -47,6 +47,7 @@
     /* Card */
     --card-background: #fff;
     --card-icon-background: #e26e3c;
+    --card-box-shadow: 0 0 5px -1px rgba(var(--body-font-color), .75);
 
     /* Portfolio */
     --portfolio-hover-state: #e26e3c;
