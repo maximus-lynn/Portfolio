@@ -1,8 +1,8 @@
+import { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import { useRouter } from "next/router";
 
 import DotIndicator from './DotIndicator';
-import { useState, useCallback } from 'react';
 import NavItems from './NavItems';
 
 const MenuContainer = styled('div')`

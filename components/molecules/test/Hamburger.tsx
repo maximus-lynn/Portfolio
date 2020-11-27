@@ -1,5 +1,5 @@
-import { FC, SetStateAction, Dispatch } from 'react';
-import styled from 'styled-components';
+import { FC, SetStateAction, Dispatch } from './node_modules/react';
+import styled from './node_modules/styled-components';
 
 interface StyledProps {
   active: boolean;

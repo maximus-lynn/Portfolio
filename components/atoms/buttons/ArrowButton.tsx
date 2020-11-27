@@ -4,14 +4,17 @@ import { FC } from "react";
 
 interface Props {
   href: string;
+  target: string;
 }
 
 const Anchor = styled('a')`
   ${defaultButtonStyling}
 `;
 
-const LaunchButton: FC<Props> = ({ children, href }) => (
-  <Anchor href={href}>
+const LaunchButton: FC<Props> = ({ children, href, target }) => (
+  <Anchor
+    href={href}
+  >
     {children}
 
     <i className="icon icon-arrow-top-left" />

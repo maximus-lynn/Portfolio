@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 // Molecules
-import Navigation from "../molecules/Navigation";
+import Navigation from "../molecules/navigation";
 import Footer from "../molecules/Footer";
 
 const Layout: FC = ({ children }) => (
