@@ -3,7 +3,7 @@ import styled from "styled-components";
 import breakpoints from '../../assets/css/breakpoints';
 
 interface  Props {
-  center: boolean;
+  center?: boolean;
 }
 
 export default styled('section')<Props>`
