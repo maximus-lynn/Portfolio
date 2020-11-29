@@ -13,8 +13,8 @@ const WorkImage = styled('div')`
   z-index: 0;
 
   &::before {
-    background-image: url('~assets/imgs/grid.png');
-    background-color: rgba($white, .75);
+    background-image: url('/images/grid.png');
+    background-color: rgba(255, 255, 255, .75);
 
     position: absolute;
     top: 0;
@@ -27,6 +27,10 @@ const WorkImage = styled('div')`
 
   img {
     width: 100%;
+  }
+
+  @media only screen and (max-width: ${breakpoints.smallOnly}) {
+    display: none;
   }
 `;
 

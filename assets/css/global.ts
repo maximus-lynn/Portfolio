@@ -41,5 +41,7 @@ export default `
     display: inline-block;
     color: var(--white);
     font-weight: bold;
+
+    cursor: pointer;
   }
 `;

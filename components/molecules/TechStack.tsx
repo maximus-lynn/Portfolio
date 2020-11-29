@@ -11,7 +11,7 @@ interface Props {
 };
 
 const WrapperContainer = styled('section')`
-  background-image: url('~assets/imgs/grid.png');
+  background-image: url('/images/grid.png');
   background-color: var(--grid-bg);
 `;
 
@@ -58,7 +58,7 @@ const TechStack = ({ techItems }: Props) => (
 
       <List>
         {techItems.map((item) => (
-          <Item>
+          <Item key={item.image}>
             <Image src={item.image} alt=""/>
           </Item>
         ))}

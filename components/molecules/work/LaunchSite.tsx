@@ -25,7 +25,10 @@ const LauchSite = ({ data }: Props) => (
     <Container center>
       <Devices src={data.launch_image} alt="" />
 
-      <ArrowButton href={data.site_url}>
+      <ArrowButton
+        href={data.site_url}
+        target="_blank"
+      >
         Launch Site
       </ArrowButton>
     </Container>

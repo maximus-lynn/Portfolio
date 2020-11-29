@@ -14,6 +14,7 @@ const Anchor = styled('a')`
 const LaunchButton: FC<Props> = ({ children, href, target }) => (
   <Anchor
     href={href}
+    target={target}
   >
     {children}
 
