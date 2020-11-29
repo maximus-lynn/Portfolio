@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import breakpoints from '../../../assets/css/breakpoints';
 
@@ -27,17 +28,25 @@ const BreadCrumb = styled('div')`
   }
 `;
 
+const Anchor = styled('a')`
+  display: inline;
+`;
+
 const Navigation = () => {
   const [open, toggleNavigation] = useState<boolean>(false);
-  const { query: {
-    workDetails
-  }} = useRouter();
-
+  const { query, pathname } = useRouter();
+  const showAvatar = pathname !== '/';
   return (
     <>
-      <Avatar />
+      {showAvatar && (
+        <Link href="/">
+          <Anchor>
+            <Avatar />
+          </Anchor>
+        </Link>
+      )}
 
-      {workDetails && (
+      {query.workDetails && (
         <BreadCrumb>
           <LeftArrowLink>
             Work

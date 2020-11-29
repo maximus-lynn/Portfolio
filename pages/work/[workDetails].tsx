@@ -12,7 +12,6 @@ import Layout from "../../components/templates/Layout";
 import ImageBlock from "../../components/molecules/work/ImageBlock";
 
 export default function WorkDetails({ fields }) {
-  console.log(fields);
   const {
     hero_image,
     laptop_screenshot,
