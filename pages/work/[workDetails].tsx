@@ -1,5 +1,5 @@
 // Services
-import fetchData from "../../services/fetchData";
+import fetchData, { fetchPageTypes } from "../../services/fetchData";
 
 // Molecules
 import Hero from "../../components/molecules/work/Hero";
@@ -11,13 +11,18 @@ import LaunchSite from "../../components/molecules/work/LaunchSite";
 import Layout from "../../components/templates/Layout";
 import ImageBlock from "../../components/molecules/work/ImageBlock";
 
-export default function WorkDetails({ fields }) {
+export default function WorkDetails({
+  launchSite,
+  introDetails,
+  techImagery,
+  behindTheScenes,
+}) {
   const {
     hero_image,
     laptop_screenshot,
     title,
     description,
-  } = fields.hero_title_and_description;
+  } = introDetails;
 
   return (
     <Layout>
@@ -30,27 +35,48 @@ export default function WorkDetails({ fields }) {
         description={description}
       />
       <TechStack
-        techItems={fields.tech_stack.tech_stack_images}
+        techItems={techImagery}
       />
       <Intro
         title="Behind the scenes"
-        description={fields.behind_the_scenes.description}
+        description={behindTheScenes.description}
       />
       <ImageBlock
-        left={fields.behind_the_scenes.left_image}
-        right={fields.behind_the_scenes.right_image}
+        left={behindTheScenes.left_image}
+        right={behindTheScenes.right_image}
       />
-      <LaunchSite data={fields.launch_site} />
+      <LaunchSite data={launchSite} />
     </Layout>
   );
 }
 
-export async function getServerSideProps({ resolvedUrl }) {
-  const data: any = await fetchData(resolvedUrl);
+export async function getStaticPaths() {
+  const data: any = await fetchPageTypes('work-details');
+
+  const dynamicRoutes = data.reduce((accum, currentData) => {
+    accum.push({
+      params: {
+        workDetails: currentData.slug,
+      }
+    });
+
+    return accum;
+  }, []);
 
   return {
+    paths: dynamicRoutes,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const data: any = await fetchData(params.workDetails);
+  return {
     props: {
-      fields: data.fields
+      launchSite: data.fields.launch_site,
+      introDetails: data.fields.hero_title_and_description,
+      techImagery: data.fields.tech_stack.tech_stack_images,
+      behindTheScenes: data.fields.behind_the_scenes,
     },
   }
 }

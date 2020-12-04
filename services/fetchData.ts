@@ -8,3 +8,8 @@ const butter = Butter(process.env.BUTTER_CMS_TOKEN);
 export default async (page: string): Promise<Butter.Response> => (
   butter.page.retrieve('*', page).then((res) => res.data.data)
 );
+
+export const fetchPageTypes = async (pageType: string): Promise<Butter.Response> => (
+  butter.page.list(pageType).then((resp) => resp.data.data)
+);
+
