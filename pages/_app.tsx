@@ -1,14 +1,9 @@
 import { Router } from 'next/router';
 import { useState } from 'react';
-import { createGlobalStyle } from 'styled-components';
 
 // CSS
-import global from '../assets/css/global';
+import GlobalStyle from '../assets/css/global';
 import '../assets/css/variables.css';
-
-const GlobalStyle = createGlobalStyle`
-  ${global}
-`;
 
 // Atoms
 import Loading from '../components/atoms/Loading';
