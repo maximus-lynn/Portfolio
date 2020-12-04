@@ -4,7 +4,7 @@ import { FC } from "react";
 
 interface Props {
   href: string;
-  target: string;
+  target?: string;
 }
 
 const Anchor = styled('a')`

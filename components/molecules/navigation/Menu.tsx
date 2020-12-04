@@ -6,10 +6,10 @@ import DotIndicator from './DotIndicator';
 import NavItems from './NavItems';
 
 const MenuContainer = styled('div')`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 
   background-color: var(--white);
   width: 100%;

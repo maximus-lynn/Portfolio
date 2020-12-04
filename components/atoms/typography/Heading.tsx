@@ -8,7 +8,8 @@ interface Styled {
   width: string;
   fontColour?: string;
   centered?: boolean;
-  borderColour: string;
+  borderColour?: string;
+  className?: string;
 }
 
 interface Props extends Styled {
@@ -32,6 +33,7 @@ const Heading: FC<Props> = ({
   centered,
   fontColour,
   children,
+  className,
 }) => {
   return (
     <StyledHeading
@@ -41,6 +43,7 @@ const Heading: FC<Props> = ({
       width={width}
       borderColour={borderColour}
       centered={centered}
+      className={className}
     >
       {children}
     </StyledHeading>

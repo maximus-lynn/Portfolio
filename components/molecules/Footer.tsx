@@ -14,7 +14,6 @@ const FooterWrapper = styled('footer')`
   justify-content: center;
   padding: 3rem 0;
 
-
   position: relative;
 `;
 
@@ -28,6 +27,9 @@ const ScrollToTopButton = styled('button')`
   border-top: 4px solid var(--orange);
   border-left: 4px solid var(--orange);
   transform: rotate(45deg);
+
+  cursor: pointer;
+  outline: none;
 `;
 
 const Footer = () => (
@@ -39,7 +41,14 @@ const Footer = () => (
         height="37"
       />
     </ButterCMSAnchor>
-    <ScrollToTopButton />
+    <ScrollToTopButton
+      onClick={() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
+      }}
+    />
   </FooterWrapper>
 );
 

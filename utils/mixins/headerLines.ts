@@ -1,20 +1,20 @@
 type Params = {
   size: string;
   width: string;
-  borderColour: string;
+  borderColour?: string;
 }
 
-const headerLine = ({size, width, borderColour}: Params): string => `
-font-size: ${size};
+const headerLine = ({ size, width, borderColour }: Params): string => `
+  font-size: ${size};
 
-&::after {
+  :after {
     content: '';
     display: block;
-    border-bottom: 3px solid ${borderColour};
+    ${borderColour && `border-bottom: 3px solid ${borderColour}`};
     margin: 0 auto;
     margin-top: 1rem;
     width: ${width};
-}
+  }
 `;
 
 export default headerLine;

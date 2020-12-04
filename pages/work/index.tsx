@@ -16,6 +16,7 @@ interface Props {
 
 const WorkList = styled('section')`
   display: flex;
+  text-align: center;
 `;
 
 export default function Work({ workItems }: Props) {
