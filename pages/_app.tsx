@@ -50,7 +50,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: bold;
 
     cursor: pointer;
-    font-size: 1rem;
   }
 `;
 
