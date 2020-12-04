@@ -1,6 +1,4 @@
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
+export default `
   * {
     box-sizing: border-box;
   }
@@ -47,5 +45,3 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 `;
-
-export default GlobalStyle;
