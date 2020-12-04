@@ -9,7 +9,7 @@ interface  Props {
 export default styled('section')<Props>`
   padding: 3rem 1.5rem;
   margin: 0 auto;
-  max-width: 51rem;
+  max-width: 52rem;
 
   ${({ center }) => center && 'text-align: center;'}
 
