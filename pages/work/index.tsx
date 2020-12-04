@@ -40,13 +40,13 @@ export default function Work({ workItems }: Props) {
           />
         ))}
       </WorkList>
-
     </Layout>
   );
 }
 
-export async function getServerSideProps({ resolvedUrl }) {
-  const data: any = await fetchData(resolvedUrl);
+export async function getStaticProps() {
+  const data: any = await fetchData('work');
+
   return {
     props: {
       workItems: data.fields.work_item,
