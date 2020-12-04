@@ -4,17 +4,14 @@ import { createGlobalStyle } from 'styled-components';
 import breakpoints from '../assets/css/breakpoints';
 
 // CSS
-// import GlobalCSS from '../assets/css/global';
+import GlobalCSS from '../assets/css/global';
 import '../assets/css/variables.css';
 
 // Atoms
 import Loading from '../components/atoms/Loading';
 
-
 const GlobalStyle = createGlobalStyle`
-  body {
-    display: none;
-  }
+  ${GlobalCSS}
 `;
 
 function App({ Component, pageProps }) {

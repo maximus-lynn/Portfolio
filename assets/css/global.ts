@@ -1,3 +1,5 @@
+import breakpoints from "./breakpoints";
+
 export default `
   * {
     box-sizing: border-box;
@@ -6,12 +8,12 @@ export default `
   html {
     font-size: 85%;
 
-    @include breakpoint(medium) {
-        font-size: 86%;
+    @media only screen and (min-width: ${breakpoints.medium}) {
+      font-size: 86%;
     }
 
-    @include breakpoint(large) {
-        font-size: 90%;
+    @media only screen and (min-width: ${breakpoints.large}) {
+      font-size: 90%;
     }
   }
 
