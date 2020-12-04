@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface Props {
-  hero: boolean;
+  hero?: boolean;
 }
 
 const AvatarWrapper= styled('span')<Props>`

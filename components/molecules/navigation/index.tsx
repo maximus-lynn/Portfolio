@@ -14,7 +14,6 @@ import Menu from './Menu';
 import Avatar from '../../atoms/Avatar';
 import LeftArrowLink from '../../atoms/buttons/LeftArrowLink';
 
-
 const BreadCrumb = styled('div')`
   position: absolute;
   top: 2rem;
