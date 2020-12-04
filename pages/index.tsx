@@ -41,7 +41,6 @@ export default function Home({
 }: Props) {
   return (
     <Layout>
-      {console.log(contactDetails)}
       <Hero
         heroImage={hero.image}
         title={hero.title}
@@ -73,10 +72,9 @@ export default function Home({
   );
 }
 
-export async function getServerSideProps({ resolvedUrl }) {
-  const home: any = await fetchData(resolvedUrl);
+export async function getStaticProps() {
+  const home: any = await fetchData('home');
   const work: any = await fetchData('work');
-  console.log(home);
 
   return {
     props: {
