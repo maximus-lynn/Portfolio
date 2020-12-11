@@ -1,7 +1,7 @@
-import Container from '../atoms/Container';
 import styled from 'styled-components';
+import Image from 'next/image';
+import Container from '../atoms/Container';
 import breakpoints from '../../assets/css/breakpoints';
-
 import headerLeftLine from '../../utils/mixins/headerLineLeft';
 
 interface Props {
@@ -49,11 +49,6 @@ const Item = styled('li')`
   }
 `;
 
-const Image = styled('img')`
-  width: 70px;
-  height: auto;
-`;
-
 const HobbiesWrapper = styled(Container)`
   @media only screen and (min-width: ${breakpoints.medium}) {
     display: flex;
@@ -91,7 +86,12 @@ const Hobbies = ({
       {images.map((item) => (
         <Item>
           <div>
-            <Image src={item.hobbie} alt="" />
+            <Image
+              src={item.hobbie}
+              alt=""
+              width={70}
+              height={70}
+            />
           </div>
         </Item>
       ))}

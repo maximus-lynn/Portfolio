@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Image from 'next/image';
+
 import breakpoints from "../../../assets/css/breakpoints";
 import headerLineLeft from "../../../utils/mixins/headerLineLeft";
 
@@ -92,7 +94,12 @@ const SkillArticle = ({
 }: Props) => (
   <Skill>
     <SkillImage>
-      <img src={image} alt={title} />
+      <Image
+        src={image}
+        alt={title}
+        width={320}
+        height={270}
+      />
     </SkillImage>
     <Header background_colour={background_colour}>
       <Title>

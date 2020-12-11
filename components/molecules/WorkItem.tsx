@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import Image from 'next/image';
 
 // Interface
 import { IWorkItem } from '../interfaces/WorkItemInterface';
@@ -25,7 +26,7 @@ const Article = styled('article')`
   }
 `;
 
-const Image = styled('img')`
+const WorkImage = styled(Image)`
   width: 100%;
   transition: all 0.5s;
 `;
@@ -62,7 +63,12 @@ const WorkItem = ({ item }: Props) => (
   <Article>
     <Link href={`/work/${item.url}`}>
       <Anchor>
-        <Image src={item.image} alt={item.title} />
+        <WorkImage
+          src={item.image}
+          alt={item.title}
+          width={560}
+          height={749}
+        />
         <Header>
           <div>
             <Heading
