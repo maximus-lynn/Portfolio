@@ -27,10 +27,6 @@ const WorkImage = styled('div')`
     content: '';
   }
 
-  img {
-    width: 100%;
-  }
-
   @media only screen and (max-width: ${breakpoints.smallOnly}) {
     display: none;
   }
@@ -41,9 +37,7 @@ const Screenshot = styled('div')`
   position: relative;
 
   @media only screen and (max-width: ${breakpoints.smallOnly}) {
-    img {
-      display: none;
-    }
+    display: none;
   }
 
   @media only screen and (min-width: ${breakpoints.medium}) {

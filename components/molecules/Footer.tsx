@@ -37,8 +37,8 @@ const Footer = () => (
     <ButterCMSAnchor href="buttercms.com" target="_blank">
       <Image
         src="https://cdn.buttercms.com/JSSDbrHPSnGlLUcyHTn5"
-        width="150"
-        height="37"
+        width={150}
+        height={37}
       />
     </ButterCMSAnchor>
     <ScrollToTopButton

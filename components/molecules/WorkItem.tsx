@@ -63,11 +63,11 @@ const WorkItem = ({ item }: Props) => (
   <Article>
     <Link href={`/work/${item.url}`}>
       <Anchor>
-        <WorkImage
+        <Image
           src={item.image}
           alt={item.title}
-          width={560}
-          height={749}
+          width="560"
+          height="749"
         />
         <Header>
           <div>
