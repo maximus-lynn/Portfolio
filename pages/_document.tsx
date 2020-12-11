@@ -22,9 +22,11 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <style>
-            @import url('https://fonts.googleapis.com/css?family=Francois+One|Lato:wght@100&display=swap');
-          </style>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Francois+One|Lato&display=swap"
+            rel="stylesheet"
+          />
           {/* Step 5: Output the styles in the head  */}
           {
             // @ts-ignore
