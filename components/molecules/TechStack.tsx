@@ -39,7 +39,7 @@ const Item = styled('li')`
   }
 `;
 
-const TechImage = styled(Image)`
+const TechImage = styled('div')`
   box-shadow: 0 0 5px -1px rgba(65,65,65,.75);
   background-color: var(--card-background);
   padding: 1.5rem;
@@ -61,12 +61,14 @@ const TechStack = ({ techItems }: Props) => (
       <List>
         {techItems.map((item) => (
           <Item key={item.image}>
-            <TechImage
-              src={item.image}
-              alt=""
-              width={115}
-              height={115}
-            />
+            <TechImage>
+              <Image
+                src={item.image}
+                alt=""
+                width={115}
+                height={115}
+              />
+            </TechImage>
           </Item>
         ))}
       </List>
