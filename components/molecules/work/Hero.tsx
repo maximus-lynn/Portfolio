@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 // Breakpoints
 import breakpoints from '../../../assets/css/breakpoints';
@@ -71,11 +72,21 @@ const ScreenshotMobile = styled('img')`
 const WorkHero = ({ image, screenshot }: Props) => (
   <section>
     <WorkImage>
-      <img src={image} alt="" />
+      <Image
+        src={image}
+        alt=""
+        width={1700}
+        height={490}
+      />
     </WorkImage>
 
     <Screenshot>
-      <img src={screenshot} alt="" />
+      <Image
+        src={screenshot}
+        width={809}
+        height={481}
+        alt=""
+      />
       <ScreenshotMobile />
     </Screenshot>
   </section>

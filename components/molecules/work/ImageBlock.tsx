@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from 'next/image';
 
 interface Props {
   left: string,
@@ -16,10 +17,20 @@ const TwoColumnedContainer = styled('section')`
 const ImageBlock = ({ left, right }: Props) => (
   <TwoColumnedContainer>
     <div>
-      <img src={left} alt=""/>
+      <Image
+        src={left}
+        alt=""
+        width={850}
+        height={560}
+      />
     </div>
     <div>
-      <img src={right} alt=""/>
+      <Image
+        src={right}
+        alt=""
+        width={850}
+        height={560}
+      />
     </div>
   </TwoColumnedContainer>
 );

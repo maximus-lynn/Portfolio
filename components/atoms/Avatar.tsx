@@ -16,7 +16,7 @@ const AvatarWrapper= styled('span')<Props>`
 
   ${({ hero }) => hero ? `
     width: 150px;
-    display: inline-block;
+    display: inline-flex;
     position: relative;
     overflow: hidden;
     border: 3px solid var(--avatar-border);

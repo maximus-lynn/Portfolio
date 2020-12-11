@@ -1,7 +1,9 @@
+import styled from "styled-components";
+import Image from 'next/image';
+
 // Atoms
 import Container from "../atoms/Container";
 import Heading from "../atoms/typography/Heading";
-import styled from "styled-components";
 import breakpoints from "../../assets/css/breakpoints";
 
 interface Props {
@@ -37,7 +39,7 @@ const Item = styled('li')`
   }
 `;
 
-const Image = styled('img')`
+const TechImage = styled(Image)`
   box-shadow: 0 0 5px -1px rgba(65,65,65,.75);
   background-color: var(--card-background);
   padding: 1.5rem;
@@ -59,7 +61,12 @@ const TechStack = ({ techItems }: Props) => (
       <List>
         {techItems.map((item) => (
           <Item key={item.image}>
-            <Image src={item.image} alt=""/>
+            <TechImage
+              src={item.image}
+              alt=""
+              width={115}
+              height={115}
+            />
           </Item>
         ))}
       </List>
