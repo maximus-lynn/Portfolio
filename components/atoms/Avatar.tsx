@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import Image from 'next/image';
 
 interface Props {
   hero?: boolean;
@@ -40,7 +41,12 @@ const AvatarWrapper= styled('span')<Props>`
 
 const Avatar = ({ hero }: Props) => (
   <AvatarWrapper hero={hero}>
-    <img src="/images/avatar.png" alt="Maxwell Lynn" />
+    <Image
+      width={150}
+      height={150}
+      src="/images/avatar.png"
+      alt="Maxwell Lynn"
+    />
   </AvatarWrapper>
 );
 

@@ -71,8 +71,6 @@ const Hero = ({ heroImage, title, name }: Props) => (
           {name}
         </Heading>
       </ContentHeader>
-
-      {/* <Scroll /> */}
     </HeroArticle>
   </section>
 );
