@@ -9,14 +9,19 @@ import { IWorkItem } from '../../components/interfaces/WorkItemInterface';
 import Layout from "../../components/templates/Layout"
 import Heading from "../../components/atoms/typography/Heading";
 import WorkItem from "../../components/molecules/WorkItem";
+import breakpoints from "../../assets/css/breakpoints";
 
 interface Props {
   workItems: Array<IWorkItem>
 }
 
-const WorkList = styled('section')`
-  display: flex;
+export const WorkList = styled('section')`
+  display: block;
   text-align: center;
+
+  @media only screen and (min-width: ${breakpoints.medium}) {
+    display: flex;
+  }
 `;
 
 export default function Work({ workItems }: Props) {

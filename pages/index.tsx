@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 // Services
 import fetchData from "../services/fetchData";
 
@@ -11,6 +9,9 @@ import Skills from "../components/molecules/Skills";
 import WorkItem from "../components/molecules/WorkItem";
 import Hobbies from "../components/molecules/Hobbies";
 import ContactDetails from "../components/molecules/ContactDetails";
+
+// WorkList
+import { WorkList } from './work/index';
 
 interface Props {
   skills: [{
@@ -25,11 +26,6 @@ interface Props {
   hobbies: any;
   contactDetails: any;
 };
-
-const WorkList = styled('div')`
-  display: flex;
-  text-align: center;
-`;
 
 export default function Home({
   hero,

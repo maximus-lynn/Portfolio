@@ -7,6 +7,7 @@ import { IWorkItem } from '../interfaces/WorkItemInterface';
 
 // Atoms
 import Heading from "../atoms/typography/Heading";
+import breakpoints from "../../assets/css/breakpoints";
 
 interface Props {
   item: IWorkItem;
@@ -26,11 +27,6 @@ const Article = styled('article')`
   }
 `;
 
-const WorkImage = styled(Image)`
-  width: 100%;
-  transition: all 0.5s;
-`;
-
 const Header = styled('header')`
   position: absolute;
   top: 0;
@@ -48,22 +44,37 @@ const Header = styled('header')`
   background-color: var(--portfolio-hover-state);
 `;
 
+
+const WorkImage = styled(Image)`
+  transition: all 0.5s;
+`;
+
 const SubTitle = styled('h6')`
   color: var(--white);
   font-size: 1.2vw;
   text-align: center;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    font-size: 3.2vw;
+  }
 `;
 
 const Anchor = styled('a')`
-  display: block;
+  display: flex;
   cursor: pointer;
+`;
+
+const WorkHeading = styled(Heading)`
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    font-size: 7vw;
+  }
 `;
 
 const WorkItem = ({ item }: Props) => (
   <Article>
     <Link href={`/work/${item.url}`}>
       <Anchor>
-        <Image
+        <WorkImage
           src={item.image}
           alt={item.title}
           width="560"
@@ -71,7 +82,7 @@ const WorkItem = ({ item }: Props) => (
         />
         <Header>
           <div>
-            <Heading
+            <WorkHeading
               type="h1"
               fontColour="var(--white)"
               size="3vw"
@@ -79,7 +90,7 @@ const WorkItem = ({ item }: Props) => (
               borderColour="var(--border-line-alt)"
             >
               {item.title}
-            </Heading>
+            </WorkHeading>
 
             <SubTitle>{item.sub_title}</SubTitle>
           </div>

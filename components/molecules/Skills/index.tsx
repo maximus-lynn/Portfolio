@@ -46,7 +46,10 @@ const SkillsTitle = styled('div')`
 
 const SkillHeading = styled(Heading)`
   margin: 2.5rem 0;
-  width: 50%;
+
+  @media only screen and (min-width: ${breakpoints.medium}) {
+    width: 50%;
+  }
 `;
 
 const Skills = ({ skills }: Props) => (

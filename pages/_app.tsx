@@ -1,7 +1,6 @@
 import { Router } from 'next/router';
 import { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
-import breakpoints from '../assets/css/breakpoints';
 
 // CSS
 import GlobalCSS from '../assets/css/global';
