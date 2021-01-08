@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import LoadingSvg from '../../assets/icons/loading.svg';
+
 const LoadingOverlay = styled('div')`
   position: absolute;
 
@@ -18,7 +20,7 @@ const LoadingOverlay = styled('div')`
 
 const Loading = () => (
   <LoadingOverlay>
-    Loading...
+    <LoadingSvg />
   </LoadingOverlay>
 );
 

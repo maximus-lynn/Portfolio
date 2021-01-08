@@ -8,6 +8,7 @@
     "start": "next dev"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@types/styled-components": "^5.1.4",
     "buttercms": "^1.2.3",
     "next": "10.0.1",
